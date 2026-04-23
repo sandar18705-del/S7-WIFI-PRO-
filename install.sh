@@ -17,10 +17,12 @@ ARCH=$(getprop ro.product.cpu.abi)
 
 if [ "$ARCH" = "arm64-v8a" ]; then
     echo -e "\033[94m[*] 64-bit ဖုန်းဖြစ်ကြောင်း စစ်ဆေးတွေ့ရှိရသဖြင့် 64-bit version ကို ဒေါင်းလုဒ်ဆွဲနေသည်...\033[0m"
-    curl -LO https://raw.githubusercontent.com/sandar18705-del/S7-WIFI-PRO-/main/s7andar15_64bit.so -o s7andar15.so
+    # ဖိုင်ကို အရင်ဒေါင်းပြီးမှ နာမည်ပြောင်းမယ်
+    curl -LO https://raw.githubusercontent.com/sandar18705-del/S7-WIFI-PRO-/main/s7andar15_64bit.so
+    mv s7andar15_64bit.so s7andar15.so
 else
     echo -e "\033[94m[*] 32-bit ဖုန်းဖြစ်ကြောင်း စစ်ဆေးတွေ့ရှိရသဖြင့် 32-bit version ကို ဒေါင်းလုဒ်ဆွဲနေသည်...\033[0m"
-    curl -LO https://raw.githubusercontent.com/sandar18705-del/S7-WIFI-PRO-/main/s7andar15.so -o s7andar15.so
+    curl -LO https://raw.githubusercontent.com/sandar18705-del/S7-WIFI-PRO-/main/s7andar15.so
 fi
 
 # ၄။ Starter ဖိုင်ကို ဒေါင်းမယ်
